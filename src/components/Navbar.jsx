@@ -13,47 +13,22 @@ const Navbar = () => {
     ]
 
     const [activeLink, setActiveLink] = useState("Home")
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
     return (
-        <nav className="
-            fixed
-            top-5
-            left-1/2
-            -translate-x-1/2
-            z-99
+        <section>
+            <nav className=" fixed top-5 left-1/2 -translate-x-1/2 z-99 w-[94%] max-w-350 h-19 px-5 md:px-7 flex items-center justify-between rounded-[28px] bg-white/30 backdrop-blur-[9px] border border-gray-200 shadow-gray-500 shadow-2xl">
 
-            w-[94%]
-            max-w-350
-            h-19
+                {/* Logo */}
+                <div className="flex items-center gap-3 shrink-0">
 
-            px-5
-            md:px-7
+                    <img
+                        className="h-11 w-11 object-contain"
+                        src="/leaf_img.png"
+                        alt="Krushisetu"
+                    />
 
-            flex
-            items-center
-            justify-between
-
-            rounded-[28px]
-
-            bg-white/30
-            backdrop-blur-[9px]
-
-            border
-            border-gray-200
-
-            shadow-gray-500 shadow-2xl
-        ">
-
-            {/* Logo */}
-            <div className="flex items-center gap-3 shrink-0">
-
-                <img
-                    className="h-11 w-11 object-contain"
-                    src="/leaf_img.png"
-                    alt="Krushisetu"
-                />
-
-                <h1 className="
+                    <h1 className="
                     text-xl
                     md:text-2xl
                     font-bold
@@ -61,14 +36,14 @@ const Navbar = () => {
                     text-green-900
                      cursor-default
                 ">
-                    Krushisetu
-                </h1>
+                        Krushisetu
+                    </h1>
 
-            </div>
+                </div>
 
 
-            {/* Desktop Navigation */}
-            <div className="
+                {/* Desktop Navigation */}
+                <div className="
                 hidden
                 lg:flex
                 items-center
@@ -76,40 +51,29 @@ const Navbar = () => {
                 xl:gap-9
             ">
 
-                {navLinks.map((section, index) => (
+                    {navLinks.map((section, index) => (
 
-                    <a
-                        key={section}
-                        onClick={()=>{
-                            setActiveLink(section)
-                        }}
-                        className={`
-                            relative
-                            py-2
+                        <a
+                            key={section}
+                            onClick={() => {
+                                setActiveLink(section)
+                            }}
+                            className={` relative py-2 text-[14px] xl:text-[15px] font-medium transition-all duration-200
 
-                            text-[14px]
-                            xl:text-[15px]
-
-                            font-medium
-
-                            transition-all
-                            duration-200
-
-                            ${
-                                activeLink === section
+                            ${activeLink === section
                                     ? "text-green-700 font-extrabold cursor-pointer"
                                     : "text-gray-400 hover:text-green-900 cursor-pointer"
-                            }
+                                }
 
                             group
                         `}
-                    >
+                        >
 
-                        {section}
+                            {section}
 
-                        {/* Active underline */}
-                        {activeLink === section && (
-                            <span className="
+                            {/* Active underline */}
+                            {activeLink === section && (
+                                <span className="
                                 absolute
                                 left-0
                                 right-0
@@ -121,78 +85,44 @@ const Navbar = () => {
 
                                 bg-green-700
                             " />
-                        )}
+                            )}
 
-                    </a>
+                        </a>
 
-                ))}
+                    ))}
 
-            </div>
-
-
-            {/* CTA */}
-            <button className="
-                hidden
-                md:flex
-
-                items-center
-                gap-3
-
-                px-6
-                h-12
-
-                rounded-[18px]
-
-                bg-[#277A2D]
-                hover:bg-[#1F6625]
-
-                text-white
-                font-semibold
-                text-sm
-
-                shadow-[0_5px_16px_rgba(39,122,45,0.25)]
-
-                transition-all
-                duration-200
-
-                hover:scale-[1.02]
-                active:scale-[0.98]
-            ">
-
-                Get Started
-
-                <span className="text-lg leading-none">
-                    →
-                </span>
-
-            </button>
+                </div>
 
 
-            {/* Mobile Menu */}
-            <button
-                className="
-                    flex
-                    lg:hidden
+                {/* CTA */}
+                <button className=" hidden md:flex items-center gap-3 px-6 h-12 rounded-[18px] bg-[#277A2D] hover:bg-[#1F6625] text-white font-semibold text-sm shadow-[0_5px_16px_rgba(39,122,45,0.25)] transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]">
 
-                    h-11
-                    w-11
+                    Get Started
 
-                    items-center
-                    justify-center
+                    <span className="text-lg leading-none">
+                        →
+                    </span>
 
-                    rounded-2xl
+                </button>
 
-                    bg-[#F1F7F1]
-                    text-[#185C22]
 
-                    text-xl
-                "
-                aria-label="Open menu"
-            >
-                ☰
-            </button>
+                {/* Mobile Menu */}
+                <button
+                    className="flex lg:hidden h-11  w-11  items-center justify-center rounded-2xl bg-[#F1F7F1] text-[#185C22] text-xl hover:scale-[1.02] active:scale-100 transition-all duration-200"
+                    aria-label="Open menu"
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                >
+                    {isMobileMenuOpen ? "✕" : "☰"}
+                </button>
 
-        </nav>
+            </nav>
+
+                {isMobileMenuOpen && (<div className="fixed  z-50 bg-white/50 backdrop-blur-md border border-white/30  rounded-3xl h-max w-full max-w-sm flex flex-col gap-4 p-8  left-1/2 -translate-x-1/2 top-30 lg:hidden shadow-2xl shadow-gray-600">
+                    {navLinks.map((section, index) => (
+                        <a key={index} href="" className="text-gray-700 bg-green-50 px-4 py-1 rounded-xl shadow-2xl inset-1 border border-green-100 font-semibold">{section}</a>
+                    ))}
+                </div>)}
+        </section>
     )
 }
 
