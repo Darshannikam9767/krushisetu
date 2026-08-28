@@ -10,9 +10,9 @@ const Home = () => {
 
             <div className=' w-[70%] absolute bg-linear-to-r from-white to-transparent inset-0 z-0' />
 
-            <div className='z-10 relative w-full max-w-350 pt-20 p-10 flex flex-col gap-3'>
+            <div className='z-10 relative w-full max-w-350 pt-20 p-10 flex flex-col gap-4'>
 
-                <div className='flex flex-col gap-2'>
+                <div className='flex flex-col gap-3'>
                     <h1 
                     className="mt-7 text-5xl sm:text-6xl lg:text-6xl xl:text-7xl leading-[1.05] tracking-wide font-bold
                             text-gray-950">Empowering Farmers <br />
@@ -20,8 +20,8 @@ const Home = () => {
 
                     <h3 className='font-semibold text-[23px]'>An Initiative of Be The Change Foundation</h3>
 
-                    <p className=' text-[17px]'>Empowering farmers through knowledge, technology, market <br />
-                        access, and goverment schemes while creating sustainable <br />
+                    <p className=' text-[17px] md:w-[70%] lg:w-[50%] xl:w-[40%]'>Empowering farmers through knowledge, technology, market 
+                        access, and goverment schemes while creating sustainable 
                         income for the Foundation</p>
 
                     <div className='flex gap-5 pt-6'>
@@ -33,22 +33,22 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className='bg-white/10 backdrop-blur-xs flex items-center justify-around w-full gap-10 px-10 py-10 rounded-3xl border border-gray-200 mt-5 text-shadow-xs text-shadow-gray-400'>
-                    <div>
-                        <h4>1000+</h4>
-                        <h5>Farmer Members</h5>    
+                <div className='bg-white/70 backdrop-blur-xs flex flex-wrap items-center justify-around w-full max-w-4xl gap-10 p-5 rounded-3xl border border-gray-200 mt-8'>
+                    <div className=' flex-1 items-center'>
+                        <h4 className='text-2xl font-bold text-green-900'>1000+</h4>
+                        <h5 className='mt-1 text-xs sm:text-sm font-medium text-gray-500'>Farmer Members</h5>    
                     </div>
-                    <div>
-                        <h4>10000+</h4>
-                        <h5>Long-term Reach</h5>
+                    <div className=' flex-1 items-center'>
+                        <h4 className='text-2xl font-bold text-green-900'>10000+</h4>
+                        <h5 className='mt-1 text-xs sm:text-sm font-medium text-gray-500'>Long-term Reach</h5>
                     </div>
-                    <div>
-                        <h4>15+</h4>
-                        <h5>Programs</h5>
+                    <div className=' flex-1 items-center'>
+                        <h4 className='text-2xl font-bold text-green-900'>15+</h4>
+                        <h5 className='mt-1 text-xs sm:text-sm font-medium text-gray-500'>Programs</h5>
                     </div>
-                    <div>
-                        <h4>40L+</h4>
-                        <h5>Potential Amount Impact</h5>
+                    <div className=' flex-1 items-center'>
+                        <h4 className='text-2xl font-bold text-green-900'>40L+</h4>
+                        <h5 className='mt-1 text-xs sm:text-sm font-medium text-gray-500'>Potential Amount Impact</h5>
                     </div>
                 </div>
 
