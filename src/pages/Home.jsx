@@ -2,13 +2,13 @@ import React from 'react'
 
 const Home = () => {
     return (
-        <section className='min-h-screen  w-full relative'>
+        <section id='home' className='min-h-screen  w-full relative'>
             <img
                 className=' absolute object-cover object-center h-full w-full -z-20'
                 src="../images/home-page-image.png"
                 alt="home_page_img" />
 
-            <div className=' w-[70%] absolute bg-linear-to-r from-white to-transparent inset-0 z-0' />
+            <div className=' w-[90%]  md:w-[70%] absolute bg-linear-to-r from-white to-transparent inset-0 z-0' />
 
             <div className='z-10 relative w-full max-w-350 pt-20 p-10 flex flex-col gap-4'>
 
