@@ -33,7 +33,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className='bg-white/70 backdrop-blur-xs flex flex-wrap items-center justify-around w-full max-w-4xl gap-10 p-5 rounded-3xl border border-gray-200 mt-8'>
+                <div className='bg-white/70 backdrop-blur-xs flex flex-wrap items-center justify-around w-full max-w-4xl gap-10 p-5 rounded-3xl border border-gray-200 mt-8 shadow-2xl shadow-gray-600'>
                     <div className=' flex-1 items-center'>
                         <h4 className='text-2xl font-bold text-green-900'>1000+</h4>
                         <h5 className='mt-1 text-xs sm:text-sm font-medium text-gray-500'>Farmer Members</h5>    

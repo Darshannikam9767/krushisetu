@@ -95,7 +95,7 @@ const Navbar = () => {
 
 
                 {/* CTA */}
-                <button className=" hidden md:flex items-center gap-3 px-6 h-12 rounded-[18px] bg-[#277A2D] hover:bg-[#1F6625] text-white font-semibold text-sm shadow-[0_5px_16px_rgba(39,122,45,0.25)] transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]">
+                <button className=" hidden lg:flex items-center gap-3 px-6 h-12 rounded-[18px] bg-[#277A2D] hover:bg-[#1F6625] text-white font-semibold text-sm shadow-[0_5px_16px_rgba(39,122,45,0.25)] transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]">
 
                     Get Started
 
@@ -117,9 +117,13 @@ const Navbar = () => {
 
             </nav>
 
-                {isMobileMenuOpen && (<div className="fixed  z-50 bg-white/50 backdrop-blur-md border border-white/30  rounded-3xl h-max w-full max-w-sm flex flex-col gap-4 p-8  left-1/2 -translate-x-1/2 top-30 lg:hidden shadow-2xl shadow-gray-600">
+                {isMobileMenuOpen && (<div className="fixed  z-50 bg-white/50 backdrop-blur-md border border-white/30  rounded-3xl h-max w-full max-w-sm flex flex-col  p-8  left-1/2 -translate-x-1/2 top-30 lg:hidden shadow-2xl shadow-gray-600">
                     {navLinks.map((section, index) => (
-                        <a key={index} href="" className="text-gray-700 bg-green-50 px-4 py-1 rounded-xl shadow-2xl inset-1 border border-green-100 font-semibold">{section}</a>
+                        <a  
+                        onClick={()=>setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        key={index} 
+                        href="" 
+                        className="px-4 py-3 rounded-2xl  text-lg font-medium text-gray-700 hover:bg-green-50 hover:text-green-700 transition-all tracking-wide">{section}</a>
                     ))}
                 </div>)}
         </section>
