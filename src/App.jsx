@@ -5,6 +5,7 @@ import About from './pages/About'
 import Services from './pages/Services'
 import Programs from './pages/Programs'
 import GovernmentSchemes from './pages/GovernmentSchemes'
+import Training from './pages/Training'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Services />
       <Programs />
       <GovernmentSchemes />
+      <Training />
     </div>
     </ReactLenis>
   )
