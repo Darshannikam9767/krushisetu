@@ -106,7 +106,7 @@ const Programs = () => {
 
                                 {/* Icon */}
 
-                                <div className="w-16 h-16 flex items-center justify-center rounded-full bg-green-50 text-green-800 transition-all duration-300 group-hover:bg-green-700 group-hover:text-white group-hover:scale-105">
+                                <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-green-50 text-green-800 transition-all duration-300 group-hover:bg-green-700 group-hover:text-white group-hover:scale-105">
 
                                     <Icon
                                         size={30}
