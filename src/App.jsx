@@ -6,6 +6,13 @@ import Services from './pages/Services'
 import Programs from './pages/Programs'
 import GovernmentSchemes from './pages/GovernmentSchemes'
 import Training from './pages/Training'
+import Partners from './pages/Partners'
+import Leadership from './pages/Leadership'
+import Faq from './pages/Faq'
+import Contact from './pages/Contact'
+import Footer from './pages/Footer'
+
+
 
 const App = () => {
   return (
@@ -18,6 +25,11 @@ const App = () => {
       <Programs />
       <GovernmentSchemes />
       <Training />
+      <Partners />
+      <Leadership />
+      <Faq />
+      <Contact />
+      <Footer/>
     </div>
     </ReactLenis>
   )

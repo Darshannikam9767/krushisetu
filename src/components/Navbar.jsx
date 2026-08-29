@@ -94,7 +94,12 @@ const Navbar = () => {
                 </div>
 
 
-                <button className=" hidden lg:flex items-center gap-3 px-6 h-12 rounded-[18px] bg-[#277A2D] hover:bg-[#1F6625] text-white font-semibold text-sm shadow-[0_5px_16px_rgba(39,122,45,0.25)] transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]">
+                <button onClick={() => {
+                    const message = encodeURIComponent(
+                        "Hello Krushisetu, I would like to know more about your services."
+                    );
+                    window.open(`https://wa.me/9767041200?text=${message}`)
+                }} className=" hidden lg:flex items-center gap-3 px-6 h-12 rounded-[18px] bg-[#277A2D] hover:bg-[#1F6625] text-white font-semibold text-sm shadow-[0_5px_16px_rgba(39,122,45,0.25)] transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]">
 
                     Get Started
 

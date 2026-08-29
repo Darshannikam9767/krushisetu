@@ -57,14 +57,11 @@ const Programs = () => {
                 alt="Programs background"
             />
 
-            {/* Overlay */}
-
-            <div className="absolute inset-0 bg-white/60 backdrop-blur-[2px] -z-10" />
 
 
             {/* Content */}
 
-            <div className="relative z-10 w-full max-w-350 mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 py-20">
+            <div className="relative z-10 w-full max-w-350 mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 py-20 mt-10">
 
                 {/* Heading */}
 

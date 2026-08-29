@@ -80,7 +80,7 @@ const Training = () => {
       <div className="absolute inset-0 bg-white/75" />
 
       {/* Content */}
-      <div className="relative z-10 flex w-full flex-col items-center gap-8 px-6 py-10">
+      <div className="relative z-10 flex w-full flex-col items-center gap-8 px-6 py-10 mt-20">
 
         {/* Header */}
         <div className="flex w-full flex-col items-center justify-center gap-3 text-center">
